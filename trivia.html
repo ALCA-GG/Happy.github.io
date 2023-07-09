@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia</title>
+</head>
+<body>
+    <style>
+        *{
+            transition: all 0.3s;            
+        }
+        body{
+            background: slategray;
+            padding: 0;
+            margin: 0;
+            text-align:center ;
+            font-family: Calibri;
+            font-size: 120%;
+        }
+        .contenedor{
+            width: 98vw;
+            height: 97vh;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .encabezado{
+            background: white;
+            min-width: 300px;
+            width: 70%;
+            max-width: 600px;
+            padding: 10px;
+        }
+        .categoria{
+            opacity: 0.3;
+            text-align: left;
+        }
+        .pregunta{
+            padding: 10px;
+        }
+        img{
+            max-width:350px;
+            height: auto;
+        }
+        img[src=""] {
+            display: none;
+        }
+        .btn{
+            background: white;
+            width: 60%;
+            max-width: 450px;
+            padding: 10px;
+            margin: 5px;
+        }
+        .btn:hover{
+            background: rgb(74, 180, 241);
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+    </style>
+    <div class="contenedor">
+        <div class="encabezado">
+            <div class="categoria" id="categoria">
+            categoria
+            </div>
+            <div class="pregunta" id="pregunta">
+            pregunta
+            </div>
+            <img src="" alt="imagen" id="imagen">
+        </div>
+        <div class="btn" id="btn1" onclick="oprimir_btn(0)">
+            option 1
+        </div>
+        <div class="btn" id="btn2" onclick="oprimir_btn(1)">
+            option 2
+        </div>
+        <div class="btn" id="btn3" onclick="oprimir_btn(2)">
+            option 3
+        </div>
+        <div class="btn" id="btn4" onclick="oprimir_btn(3)">
+            option 4
+        </div>
+        <div class="btn" id="btn5" onclick="oprimir_btn(4)">
+            option 5
+        </div>
+    </div>
+    <script>
+        let questionBase = readText("preguntas.json");
+        let interprete_bp = JSON.parse(questionBase);
+        let question;
+        let answer;
+        let btn_correct = [
+            select_id("btn1"),
+            select_id("btn2"),
+            select_id("btn3"),
+            select_id("btn4"),
+            select_id("btn5"),
+        ]
+
+        escogerPreguntaAleatoria();
+
+        function escogerPreguntaAleatoria() {
+            escogerPregunta(Math.floor(Math.random() * interprete_bp.length));
+        }
+
+        function escogerPregunta(n) {
+            question = interprete_bp[n];
+            select_id("categoria").innerHTML = question.categoria;
+            select_id("pregunta").innerHTML = question.pregunta;
+            select_id("imagen").setAttribute("src", question.imagen);
+            style("imagen").objectFit = question.objectFit;
+            desordenarRespuestas(question);
+        }
+
+        function desordenarRespuestas(question) {
+            answer = [
+                question.respuesta,
+                question.incorrecta1,
+                question.incorrecta2,
+                question.incorrecta3,
+                question.incorrecta4
+            ];
+
+            answer.sort(() => Math.random() - 0.5);
+
+            select_id("btn1").innerHTML = answer[0];
+            select_id("btn2").innerHTML = answer[1];
+            select_id("btn3").innerHTML = answer[2];
+            select_id("btn4").innerHTML = answer[3];
+            select_id("btn5").innerHTML = answer[4];
+        }
+        function oprimir_btn(i) {
+            if(answer[i] == question.respuesta){
+                btn_correct[i].style.background = "lightgreen"
+            }else{
+                btn_correct[i].style.background = "pink"
+            }
+            setTimeout(()=>{
+
+                rebootColors()
+            },1500)
+        }
+
+        function rebootColors(){
+            for(const btn of btn_correct){
+                btn.style.background = "white";
+            }
+            escogerPreguntaAleatoria()
+        }
+
+        function select_id(id) {
+            return document.getElementById(id);
+        }
+
+        function style(id) {
+            return select_id(id).style;
+        }
+
+        function readText(ruta_local) {
+            var text = null;
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET", ruta_local, false);
+            xmlhttp.send();
+            if (xmlhttp.status == 200) {
+                text = xmlhttp.responseText;
+            }
+            return text;
+        }
+    </script>
+</body>
+</html>

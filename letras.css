@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: -webkit-radial-gradient(#560e86, #0a0011);
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container span {
+    font-size: 3vw;
+    font-weight: bold;
+    position: relative;
+    font-family: "Fredoka One";
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    letter-spacing: 0.8em;
+}
+
+.container span::before,
+.container span::after {
+    content: var(--l);
+    position: absolute;
+    filter: blur(1.5vw);
+    pointer-events: none;
+}
+
+.container span::before {
+    top: 7vh;
+    transform: scale(1.1);
+}
+
+.container span::after {
+    height: 200%;
+    width: 30vw;
+    top: 45%;
+    left: 0;
+    filter: blur(3vw);
+    transform: rotateX(50deg);
+}
+
+.container span:hover {
+    filter: contrast(250%);
+}
+
+.container span:nth-child(1) {
+    color: #00bef8;
+}
+
+.container span:nth-child(2) {
+    color: #ff0697;
+}
+
+.container span:nth-child(3) {
+    color: #ff4d00;
+}
+
+.container span:nth-child(4) {
+    color: #ffe600;
+}
+
+.container span:nth-child(5) {
+    color: #bb00ff;
+}
+
+.container span:nth-child(6) {
+    color: pink;
+    letter-spacing: 2.4em;
+}
+
+.container span:nth-child(7) {
+    color: #00bef8;
+}
+
+.container span:nth-child(8) {
+    color: yellow;
+}
+
+.container span:nth-child(9) {
+    color: #ff0697;
+}
+
+.container span:nth-child(10) {
+    color: gold;
+}
+
+.container span:nth-child(11) {
+    color: #ff4d00;
+}
+
+.container span:nth-child(12) {
+    color: red;
+}
+
+.container span:nth-child(13) {
+    color: #bb00ff;
+}
+
+.container span:nth-child(14) {
+    color: #bb00ff;
+}
+
+.container span:nth-child(15) {
+    color: #ff0697;
+}
+
+.container span:nth-child(16) {
+    color: #00bef8;
+}

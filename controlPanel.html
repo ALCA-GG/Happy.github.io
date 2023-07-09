@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Panel de Control</title>
+    <style>
+    /* Estilos CSS para el panel de control */
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+
+    .panel {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    /* Estilos CSS para el reproductor de SoundCloud */
+    #musicPlayer {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%; /* Proporción 16:9 (para un reproductor responsive) */
+        overflow: hidden;
+        margin-top: 10px;
+    }
+
+    #musicPlayer iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    </style>
+</head>
+<body>
+    <div class="panel">
+        <h1>Panel de Control</h1>
+
+        <h2>Tema de Color</h2>
+        <label for="color">Elige tu color favorito:</label>
+        <input type="color" id="color" onchange="changeColor()">
+
+        <h2>Imagen de Fondo</h2>
+        <label for="image">Selecciona tu imagen de fondo:</label>
+        <input type="file" id="image" accept="image/*" onchange="changeImage()">
+
+        <h2>Música de Fondo</h2>
+        <label for="music">Introduce el enlace de SoundCloud:</label>
+        <a href="https://soundcloud.com" target="_blank">SoundCloud</a> <!-- Enlace a SoundCloud -->
+        <br>
+        <br>
+
+        <input type="text" id="musicLink" placeholder="Ejemplo: https://soundcloud.com/usuario/nombre-de-la-pista">
+        <button onclick="changeMusic()">Reproducir</button>
+        
+        <div id="musicPlayer"></div>
+    </div>
+
+
+    <script>
+    // API de YouTube
+    var player;
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+        height: '0',
+        width: '0',
+        events: {
+            'onReady': onPlayerReady
+        }
+    });
+    }
+
+    // Función para cambiar el color del fondo
+    function changeColor() {
+        var color = document.getElementById('color').value;
+        document.body.style.backgroundColor = color;
+    }
+
+    // Función para cambiar la imagen de fondo
+    function changeImage() {
+        var input = document.getElementById('image');
+        var file = input.files[0];
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+            var image = new Image();
+            image.src = e.target.result;
+            image.onload = function() {
+                document.body.style.backgroundImage = "url('" + e.target.result + "')";
+            };
+        };
+
+        reader.readAsDataURL(file);
+    }
+
+    // Función para cambiar la música de fondo
+    function changeMusic() {
+        var musicLink = document.getElementById('musicLink').value;
+        var playerDiv = document.getElementById('musicPlayer');
+        playerDiv.innerHTML = ''; // Eliminar cualquier contenido previo
+        var iframe = document.createElement('iframe');
+        iframe.width = '100%';
+        iframe.height = '100%';
+        iframe.scrolling = 'no';
+        iframe.frameborder = 'no';
+        iframe.allow = 'autoplay';
+        iframe.src = "https://w.soundcloud.com/player/?url=" + encodeURIComponent(musicLink);
+        playerDiv.appendChild(iframe);
+    }
+
+    function onPlayerReady(event) {
+        event.target.setVolume(50);
+    }
+    </script>
+</body>
+</html>

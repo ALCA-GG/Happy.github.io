@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Juegos</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+    <style>
+        body {
+            background-image: url("/image/desktop-wallpaper-rainbow-dash-cute-rainbow-dash.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .menu-heading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 210px;
+        }
+
+        .menu-heading img {
+            width: 100px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .menu-heading h1 {
+            font-size: 60px;
+            color: #FFF;
+            font-weight: bold;
+        }
+
+        .game-container {
+            display: flex; /* Cambio a display flex */
+            justify-content: center; /* Alineación horizontal */
+            flex-wrap: wrap; /* Ajustar a varias filas */
+            gap: 120px; /* Espaciado entre los juegos */
+            padding: 20px;
+        }
+
+        .game-item {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            overflow: hidden;
+            border-bottom: 2px solid white; /* Línea separadora inferior */
+
+        }
+        
+        .game-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 2px;
+            background-color: white;
+        }
+        .game-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ajusta la imagen para que cubra completamente el contenedor */
+            position: relative;
+            z-index: 1;
+        }
+        .game-item:hover {
+            transform: scale(1.2); /* Aumenta la escala de la imagen al colocar el mouse encima */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Agrega un sombreado al colocar el mouse encima */
+        }
+        .game-item p {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="menu-heading" onclick="openGame('mainMenu.html')">
+            <img src="/image/control.png" alt="Logo">
+            <h1>Games</h1>
+        </div>
+
+        <div class="game-container">
+            <div class="game-item" onclick="openGame('trivia.html')">
+                <div class="rgb-overlay"></div>
+                <img src="/image/Trivia.png" alt="Icono de Trivia">
+                <p>Trivia</p>
+            </div>
+            <div class="game-item" onclick="openGame('Game1.html')">
+                <div class="rgb-overlay"></div>
+                <img src="/image/ahorcado.png" alt="Rompecabezas">
+                <p>Ahorcado</p>
+            </div>
+            <div class="game-item" onclick="openGame('Adivinanzas.html')">
+                <div class="rgb-overlay"></div>
+                <img src="/image/Duda.png" alt="Adivinanzas/Acertijos">
+                <p>Adivinanzas</p>
+            </div>
+            <div class="game-item" onclick="openGame('Questions.html')">
+                <div class="rgb-overlay"></div>
+                <img src="/image/Questions.png" alt="Cuestionarios">
+                <p>Cuestionarios de Amor</p>
+            </div>
+        </div>
+        <script>
+            function openGame(gameUrl) {
+                window.location.href = gameUrl;
+            }
+        </script>
+</body>
+</html>

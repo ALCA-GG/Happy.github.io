@@ -1,0 +1,51 @@
+[
+    {
+        "titulo": "Harry Potter y la piedra filosofal",
+        "descripcion": "",
+        "categoria": "novela",
+        "imagen": "/image/PiedraFilosofal.jpg",
+        "pdf": "/image/pdf/harry potter y la piedra filosofal.pdf"
+    },
+    {
+        "titulo": "Harry Potter y la cámara secreta",
+        "descripcion": "",
+        "categoria": "novela",
+        "imagen": "/image/Harry Potter y la cámara secreta.jpg",
+        "pdf": "/image/pdf/J.K._Rowling_-_2Harry_Potter_y_la_Camara_secreta.pdf"
+    },
+    {
+        "titulo": "Harry Potter y el prisionero de Azkaban",
+        "descripcion": "",
+        "categoria": "novela",
+        "imagen": "/image/Harry Potter y el prisionero de Azkaban.jpg",
+        "pdf": "/image/pdf/RowlingJ-Harry-Potter-y-el-prisionero-de-Azkaban-III.pdf"
+    },
+    {
+        "titulo": "Harry Potter y el cáliz de fuego",
+        "descripcion": "",
+        "categoria": "novela",
+        "imagen": "/image/Harry Potter y el cáliz de fuego.jpg",
+        "pdf": "/image/pdf/HARRY POTTER Y EL CALIZ DE FUEGO.pdf"
+    },
+    {
+        "titulo": "Harry Potter y la Orden del Fénix",
+        "descripcion": "",
+        "categoria": "novela",
+        "imagen": "/image/Harry Potter y la Orden del Fénix.jpg",
+        "pdf": "/image/pdf/Rowling, Joanne K.- 5. Harry Potter y la Orden del Fenix.doc.pdf"
+    },
+    {
+        "titulo": "Harry Potter y el misterio del príncipe",
+        "descripcion": "",
+        "categoria": "novela",
+        "imagen": "/image/Harry Potter y el misterio del príncipe.jpg",
+        "pdf": "/image/pdf/HARRY POTTER Y EL MISTERIO DEL PRINCIPE - J. K. ROWLING.pdf"
+    },
+    {
+        "titulo": "Harry Potter y las Reliquias de la Muerte",
+        "descripcion": "",
+        "categoria": "novela",
+        "imagen": "/image/Harry Potter y las Reliquias de la Muerte.jpg",
+        "pdf": "/image/pdf/harry potter y las reliquias de la muerte.pdf"
+    }
+]

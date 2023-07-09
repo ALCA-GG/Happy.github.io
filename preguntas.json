@@ -1,0 +1,374 @@
+[
+    {
+        "categoria" : "Arte y literatura", 
+        "pregunta":"Quien dibujo la mona lisa?",
+        "respuesta":"Leonardo da Vinci",
+        "incorrecta1":"Leonardo dicaprio",
+        "incorrecta2":"Picasso",
+        "incorrecta3":"Miguel Angel",
+        "incorrecta4":"Monet",
+        "imagen":"https://i.ibb.co/HPbX3CY/mona-lisa-louvre-134fb54a-550x821.jpg",
+        "objectFit":"cover"
+    },
+    {
+        "categoria" : "Arte y literatura",
+        "pregunta": "¿Quién pintó La noche estrellada?",
+        "incorrecta1": "Pablo Picasso",
+        "incorrecta2": "Leonardo da Vinci",
+        "incorrecta3": "Claude Monet",
+        "respuesta": "Vincent van Gogh",
+        "incorrecta4": "Salvador Dalí",
+        "imagen": "https://i.ibb.co/nwpcr7J/que-paso-con-el-cuadro-de-van-gogh-1122016-jpg-imgo.jpg",
+        "objectFit":"cover"
+    },
+    {
+        "categoria" : "Películas",
+        "pregunta": "¿Cuál es el nombre completo del actor que interpreta a Ron Weasley en las películas de Harry Potter?",
+        "incorrecta1": "Rupeert Grint",
+        "incorrecta2" : "Tom Felton",
+        "respuesta" : "Rupert Grint",
+        "incorrecta3" : "Daniel Radcliffe",
+        "incorrecta4" : "Matthew Lewis",
+        "imagen":"https://i.ibb.co/k4WkHQg/ron-weasley-hp-1671097236.jpg"
+    },
+    {
+        "categoria" : "Arte y literatura",
+        "pregunta": "¿Quién pintó el famoso cuadro 'La última cena'?",
+        "incorrecta1": "Pablo Picasso",
+        "incorrecta2" : "Salvador Dalí",
+        "respuesta" : "Leonardo da Vinci",
+        "incorrecta3" : "Vincent van Gogh",
+        "incorrecta4" : "Frida Kahlo",
+        "imagen":"https://i.ibb.co/fqB4cJV/download.jpg",
+        "objectFit":"cover"
+    },
+    {
+        "categoria" : "Arte y literatura",
+        "pregunta": "¿Qué famoso autor escribió 'Cien años de soledad'?",
+        "incorrecta1": "Mario Vargas Llosa",
+        "incorrecta2" : "Jorge Luis Borges",
+        "respuesta" : "Gabriel García Márquez",
+        "incorrecta3" : "Pablo Neruda",
+        "incorrecta4" : "Julio Cortázar"
+    },
+    {
+        "categoria" : "Arte y literatura",
+        "pregunta": "¿Cuál es la pintura más famosa de Edvard Munch?",
+        "incorrecta1": "La Gioconda",
+        "incorrecta2" : "La noche estrellada",
+        "respuesta" : "El grito",
+        "incorrecta3" : "Los jugadores de cartas",
+        "incorrecta4" : "La persistencia de la memoria"
+    },
+    {
+        "categoria" : "Arte y literatura",
+        "pregunta": "¿Cuál es el autor del libro 'Don Quijote de la Mancha'?",
+        "incorrecta1": "Miguel de Unamuno",
+        "incorrecta2" : "Federico García Lorca",
+        "respuesta" : "Miguel de Cervantes Saavedra",
+        "incorrecta3" : "Jorge Luis Borges",
+        "incorrecta4" : "Gustavo Adolfo Bécquer"
+    },
+    {
+        "categoria" : "Arte y literatura",
+        "pregunta": "¿Quién pintó 'La noche estrellada'?",
+        "incorrecta1": "Salvador Dalí",
+        "incorrecta2" : "Vincent van Gogh",
+        "respuesta" : "Leonardo da Vinci",
+        "incorrecta3" : "Pablo Picasso",
+        "incorrecta4" : "Claude Monet",
+        "imagen":"https://i.ibb.co/nwpcr7J/que-paso-con-el-cuadro-de-van-gogh-1122016-jpg-imgo.jpg",
+        "objectFit":"cover"
+    },
+    {
+        "categoria" : "Arte y literatura",
+        "pregunta": "¿Cuál es la escultura más famosa de Auguste Rodin?",
+        "incorrecta1": "La Venus de Milo",
+        "incorrecta2" : "El pensador",
+        "respuesta" : "El beso",
+        "incorrecta3" : "La piedad",
+        "incorrecta4" : "David"
+    },
+    {
+        "categoria" : "Arte y literatura",
+        "pregunta": "¿Quién escribió la famosa obra 'Romeo y Julieta'?",
+        "incorrecta1": "Federico García Lorca",
+        "incorrecta2" : "William Wordsworth",
+        "respuesta" : "William Shakespeare",
+        "incorrecta3" : "Oscar Wilde",
+        "incorrecta4" : "George Orwell"
+    },
+    {
+        "categoria" : "Arte y literatura",
+        "pregunta": "¿Quién es el autor de la famosa novela '1984'?",
+        "incorrecta1": "Aldous Huxley",
+        "incorrecta2" : "George Orwell",
+        "respuesta" : "Ray Bradbury",
+        "incorrecta3" : "J.R.R. Tolkien",
+        "incorrecta4" : "Kurt Vonnegut"
+    },
+    {
+        "categoria" : "Arte y literatura",
+        "pregunta": "¿Cuál es la obra más famosa de Leonardo da Vinci?",
+        "incorrecta1": "El nacimiento de Venus",
+        "incorrecta2" : "La última cena",
+        "respuesta" : "La Mona Lisa",
+        "incorrecta3" : "El Guernica",
+        "incorrecta4" : "La persistencia de la memoria"
+    },
+    {
+        "categoria" : "Arte y literatura",
+        "pregunta": "¿Quién escribió la famosa obra de teatro 'Hamlet'?",
+        "incorrecta1": "Anton Chejov",
+        "incorrecta2" : "Samuel Beckett",
+        "respuesta" : "William Shakespeare",
+        "incorrecta3" : "Friedrich Nietzsche",
+        "incorrecta4" : "Voltaire"
+    },
+    {
+        "categoria" : "Arte y literatura",
+        "pregunta": "¿Quién pintó el techo de la Capilla Sixtina en el Vaticano?",
+        "incorrecta1": "Pablo Picasso",
+        "incorrecta2" : "Leonardo da Vinci",
+        "respuesta" : "Miguel Ángel",
+        "incorrecta3" : "Donatello",
+        "incorrecta4" : "Rafael",
+        "imagen":"https://i.ibb.co/mc01FbR/capilla-sixtina-ciudad-del-vaticano-7a86d708-800x536.jpg",
+        "objectFit":"cover"
+    },
+    {
+        "categoria" : "Arte y literatura",
+        "pregunta": "¿Quién es el autor del cuadro 'La persistencia de la memoria'?",
+        "incorrecta1": "Salvador Dalí",
+        "incorrecta2" : "Vincent van Gogh",
+        "respuesta" : "René Magritte",
+        "incorrecta3" : "Pablo Picasso",
+        "incorrecta4" : "Frida Kahlo",
+        "imagen":"https://i.ibb.co/0Vq6B33/ey-J0e-XAi-Oi-JKV1-Qi-LCJhb-Gci-Oi-JIUz-I1-Ni-J9-ey-Jpb-SI6-Wy-Jc-L2-Fyd-Hdvcmtc-L2lt-YWdl-Rmls-ZVwv.png"
+    },
+    {
+        "categoria" : "Arte y literatura",
+        "pregunta": "¿Cuál es el autor del libro 'En busca del tiempo perdido'?",
+        "incorrecta1": "Franz Kafka",
+        "incorrecta2" : "Italo Calvino",
+        "respuesta" : "Marcel Proust",
+        "incorrecta3" : "Hermann Hesse",
+        "incorrecta4" : "Charles Baudelaire"
+    },
+    {
+        "categoria" : "Anime",
+        "pregunta": "¿Cuál es el nombre del famoso ninja de la aldea de Konoha?",
+        "incorrecta1": "Goku",
+        "incorrecta2" : "Luffy",
+        "respuesta" : "Naruto Uzumaki",
+        "incorrecta3" : "Monkey D. Luffy",
+        "incorrecta4" : "Ichigo Kurosaki"
+    },
+    {
+        "categoria" : "Anime",
+        "pregunta": "¿Cuál es el nombre del protagonista de 'One Piece'?",
+        "incorrecta1": "Sasuke Uchiha",
+        "incorrecta2" : "Gon Freecss",
+        "respuesta" : "Monkey D. Luffy",
+        "incorrecta3" : "Naruto Uzumaki",
+        "incorrecta4" : "Ichigo Kurosaki"
+    },
+    {
+        "categoria" : "Anime",
+        "pregunta": "¿Quién es el protagonista de 'Death Note'?",
+        "incorrecta1": "Goku",
+        "incorrecta2" : "Luffy",
+        "respuesta" : "Light Yagami",
+        "incorrecta3" : "Naruto Uzumaki",
+        "incorrecta4" : "Ichigo Kurosaki"
+    },
+    {
+        "categoria" : "Anime",
+        "pregunta": "¿Cuál es el nombre del shinigami en 'Bleach'?",
+        "incorrecta1": "Vegeta",
+        "incorrecta2" : "Luffy",
+        "respuesta" : "Ichigo Kurosaki",
+        "incorrecta3" : "Naruto Uzumaki",
+        "incorrecta4" : "Light Yagami"
+    },
+    {
+        "categoria" : "Anime",
+        "pregunta": "¿Cuál es el nombre del protagonista de 'Attack on Titan'?",
+        "incorrecta1": "Sasuke Uchiha",
+        "incorrecta2" : "Eren Yeager",
+        "respuesta" : "Eren Jaeger",
+        "incorrecta3" : "Naruto Uzumaki",
+        "incorrecta4" : "Ichigo Kurosaki"
+    },
+    {
+        "categoria" : "Anime",
+        "pregunta": "¿Cuál es el nombre del protagonista de 'Fullmetal Alchemist'?",
+        "incorrecta1": "Goku",
+        "incorrecta2" : "Edward Elric",
+        "respuesta" : "Edward Elric",
+        "incorrecta3" : "Naruto Uzumaki",
+        "incorrecta4" : "Ichigo Kurosaki"
+    },
+    {
+        "categoria" : "Anime",
+        "pregunta": "¿Cuál es el nombre del protagonista de 'My Hero Academia'?",
+        "incorrecta1": "Sasuke Uchiha",
+        "incorrecta2" : "Monkey D. Luffy",
+        "respuesta" : "Izuku Midoriya",
+        "incorrecta3" : "Naruto Uzumaki",
+        "incorrecta4" : "Ichigo Kurosaki"
+    },
+    {
+        "categoria" : "Anime",
+        "pregunta": "¿Cuál es el nombre de la protagonista de 'Sailor Moon'?",
+        "incorrecta1": "Bulma",
+        "incorrecta2" : "Nami",
+        "respuesta" : "Usagi Tsukino",
+        "incorrecta3" : "Sakura Kinomoto",
+        "incorrecta4" : "Lucy Heartfilia"
+    },
+    {
+        "categoria" : "Películas",
+        "pregunta": "¿Cuál es el nombre completo del personaje principal en la serie de películas 'Harry Potter'?",
+        "incorrecta1": "Harry Weasley",
+        "incorrecta2" : "Harry Diggory",
+        "respuesta" : "Harry James Potter",
+        "incorrecta3" : "Harry Black",
+        "incorrecta4" : "Harry Malfoy"
+    },
+    {
+        "categoria" : "Películas",
+        "pregunta": "¿Cuál es el nombre completo del personaje principal en la serie de películas 'Harry Potter'?",
+        "incorrecta1": "Harry Weasley",
+        "incorrecta2" : "Harry Diggory",
+        "respuesta" : "Harry James Potter",
+        "incorrecta3" : "Harry Black",
+        "incorrecta4" : "Harry Malfoy"
+    },
+    {
+        "categoria" : "Películas",
+        "pregunta": "¿Quién interpreta a Hermione Granger en las películas de 'Harry Potter'?",
+        "incorrecta1": "Emma Thompson",
+        "incorrecta2" : "Emma Stone",
+        "respuesta" : "Emma Watson",
+        "incorrecta3" : "Emma Roberts",
+        "incorrecta4" : "Emma Stone"
+    },
+    {
+        "categoria" : "Películas",
+        "pregunta": "¿Cuál es el nombre del colegio donde estudia Harry Potter en las películas?",
+        "incorrecta1": "Colegio Hogwarts de Hechicería",
+        "incorrecta2" : "Colegio Durmstrang",
+        "respuesta" : "Colegio Hogwarts de Magia y Hechicería",
+        "incorrecta3" : "Colegio Beauxbatons",
+        "incorrecta4" : "Colegio Ilvermorny"
+    },
+    {
+        "categoria" : "Películas",
+        "pregunta": "¿Cuál es el título de la primera película de la serie 'Harry Potter'?",
+        "incorrecta1": "Harry Potter y el misterio del príncipe",
+        "incorrecta2" : "Harry Potter y la cámara secreta",
+        "respuesta" : "Harry Potter y la piedra filosofal",
+        "incorrecta3" : "Harry Potter y el cáliz de fuego",
+        "incorrecta4" : "Harry Potter y las reliquias de la muerte"
+    },
+    {
+        "categoria" : "Películas",
+        "pregunta": "¿Cuál es el nombre del actor que interpreta a Harry Potter en las películas?",
+        "incorrecta1": "Daniel Radcliffe",
+        "incorrecta2" : "Rupert Grint",
+        "respuesta" : "Daniel Radcliffe",
+        "incorrecta3" : "Tom Felton",
+        "incorrecta4" : "Matthew Lewis"
+    },
+    {
+        "categoria" : "Películas",
+        "pregunta": "¿Cuál es el nombre del villano principal en la serie de películas 'Harry Potter'?",
+        "incorrecta1": "Lucius Malfoy",
+        "incorrecta2" : "Bellatrix Lestrange",
+        "respuesta" : "Lord Voldemort",
+        "incorrecta3" : "Severus Snape",
+        "incorrecta4" : "Gellert Grindelwald"
+    },
+    {
+        "categoria" : "Películas",
+        "pregunta": "¿Cuál es el nombre del banco controlado por los duendes en el mundo mágico de Harry Potter?",
+        "incorrecta1": "Banco de Londres",
+        "incorrecta2" : "Banco de Inglaterra",
+        "respuesta" : "Banco Gringotts",
+        "incorrecta3" : "Banco Mundial Mágico",
+        "incorrecta4" : "Banco de los Hechiceros"
+    },
+    {
+        "categoria" : "Películas",
+        "pregunta": "¿Cuál es el objeto mágico que permite a Harry Potter comunicarse con las serpientes?",
+        "incorrecta1": "Espejo de Oesed",
+        "incorrecta2" : "Piedra Filosofal",
+        "respuesta" : "Hablante Parsel",
+        "incorrecta3" : "Varita de Saúco",
+        "incorrecta4" : "Capa de Invisibilidad"
+    },
+    {
+        "categoria" : "Películas",
+        "pregunta": "¿Cuál es el nombre del profesor de Defensa Contra las Artes Oscuras en 'Harry Potter y el Prisionero de Azkaban'?",
+        "incorrecta1": "Severus Snape",
+        "incorrecta2" : "Remus Lupin",
+        "respuesta" : "Alastor Moody",
+        "incorrecta3" : "Rubeus Hagrid",
+        "incorrecta4" : "Gilderoy Lockhart"
+    },
+    {
+        "categoria" : "Películas",
+        "pregunta": "¿Cuál es la película ganadora del premio Óscar a Mejor Película en 2020?",
+        "incorrecta1": "1917",
+        "incorrecta2" : "Once Upon a Time in Hollywood",
+        "respuesta" : "Parasite",
+        "incorrecta3" : "Joker",
+        "incorrecta4" : "The Irishman"
+    },
+    {
+        "categoria" : "Series",
+        "pregunta": "¿Cuál es el nombre del personaje principal en 'Stranger Things'?",
+        "incorrecta1": "Mike Wheeler",
+        "incorrecta2" : "Lucas Sinclair",
+        "respuesta" : "Eleven / Jane Hopper",
+        "incorrecta3" : "Dustin Henderson",
+        "incorrecta4" : "Will Byers"
+    },
+    {
+        "categoria" : "Series",
+        "pregunta": "¿Cuál es el nombre del lugar ficticio donde ocurren los sucesos en 'Stranger Things'?",
+        "incorrecta1": "Hawkinsville",
+        "incorrecta2" : "Mill Valley",
+        "respuesta" : "Hawkins",
+        "incorrecta3" : "Derry",
+        "incorrecta4" : "Castle Rock"
+    },
+    {
+        "categoria" : "Series",
+        "pregunta": "¿Cuál es el nombre del grupo de amigos en 'Stranger Things'?",
+        "incorrecta1": "The Losers' Club",
+        "incorrecta2" : "The Scooby Gang",
+        "respuesta" : "The Party",
+        "incorrecta3" : "The Inbetweeners",
+        "incorrecta4" : "The Fellowship"
+    },
+    {
+        "categoria": "Arte y literatura",
+        "pregunta": "¿Quién pintó la Mona Lisa?",
+        "respuesta": "Leonardo da Vinci",
+        "incorrecta1": "Pablo Picasso",
+        "incorrecta2": "Vincent van Gogh",
+        "incorrecta3": "Salvador Dalí",
+        "incorrecta4": "yo"
+    },
+    {
+        "categoria": "Historia",
+        "pregunta": "¿En qué año se firmó la Declaración de Independencia de los Estados Unidos?",
+        "respuesta": "1776",
+        "incorrecta1": "1789",
+        "incorrecta2": "1804",
+        "incorrecta3": "1812",
+        "incorrecta4": "1815"
+    }
+]

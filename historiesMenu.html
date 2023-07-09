@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Catálogo de Historias</title>
+    <style>
+        body {
+            text-align: center;
+            background-image: url('/image/Background/Histories/Hogwoarts.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px; /* Espacio inferior */
+        }
+
+        .menu li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f2f2f2;
+            font-size: 20px;
+        }
+
+        .menu li a:hover {
+            background-color: #eaeaea;
+        }
+
+        #catalogo {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .historia {
+            width: 30%;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f2f2f2;
+        }
+
+        .historia.cuento {
+            background-color: #FFD700; /* Color para la categoría "Cuentos" */
+        }
+
+        .historia.novela {
+            background-color: #00FFFF; /* Color para la categoría "Novelas" */
+        }
+
+        .historia.historia-corta {
+            background-color: #FFA07A; /* Color para la categoría "Historias Cortas" */
+        }
+
+        .historia img {
+            width: 100%;
+            height: auto;
+        }
+
+        .img-catalogo {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .historia .card {
+            height: 25px;
+            width: 90px;
+            background-color: black;
+            border: 1px solid black;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 16px;
+        }
+
+        .historia .card::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            height: 200%;
+            width: 200%;
+            background-image: conic-gradient(red 0deg, transparent 620deg);
+            animation: rotation 2s linear infinite;
+        }
+
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+
+        .historia .button-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 25px;
+            transform: translate(-50%, -50%);
+        }
+        .titulo {
+            color: white;
+        }
+        .historia .button-container button {
+            height: 50px;
+            width: 105px;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        #pdf-container {
+            width: 100%;
+            height: 800px; /* Ajusta la altura del contenedor según tus necesidades */
+        }
+    </style>
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <script>
+        function cargarHistorias() {
+            fetch('historias.json')
+                .then(response => response.json())
+                .then(data => mostrarHistorias(data))
+                .catch(error => console.error('Error al cargar las historias:', error));
+        }
+        function mostrarCategoria(categoria) {
+            var historias = document.getElementsByClassName('historia');
+            for (var i = 0; i < historias.length; i++) {
+                if (historias[i].classList.contains(categoria)) {
+                    historias[i].style.display = 'block';
+                } else {
+                    historias[i].style.display = 'none';
+                }
+            }
+        }
+        function mostrarTodo() {
+            var historias = document.getElementsByClassName('historia');
+            for (var i = 0; i < historias.length; i++) {
+                historias[i].style.display = 'block';
+            }
+        }
+        function mostrarHistorias(historias) {
+            var catalogo = document.getElementById('catalogo');
+            catalogo.innerHTML = '';
+
+            historias.forEach(historia => {
+                var divHistoria = document.createElement('div');
+                divHistoria.classList.add('historia', historia.categoria);
+                catalogo.appendChild(divHistoria);
+
+                var h2 = document.createElement('h2');
+                h2.textContent = historia.titulo;
+                divHistoria.appendChild(h2);
+
+                var img = document.createElement('img');
+                img.src = historia.imagen;
+                img.classList.add('img-catalogo');
+                divHistoria.appendChild(img);
+
+                var p = document.createElement('p');
+                p.textContent = historia.descripcion;
+                divHistoria.appendChild(p);
+
+                var cardLeer = document.createElement('div');
+                cardLeer.classList.add('card');
+                divHistoria.appendChild(cardLeer);
+
+                var buttonContainer = document.createElement('div');
+                buttonContainer.classList.add('button-container');
+                cardLeer.appendChild(buttonContainer);
+
+                var buttonLeer = document.createElement('button');
+                buttonLeer.textContent = 'Leer';
+                buttonLeer.addEventListener('click', function() {
+                    mostrarLectura(historia.pdf);
+                });
+                buttonContainer.appendChild(buttonLeer);
+            });
+        }
+
+        function mostrarLectura(pdfURL) {
+            window.location.href = `visorpdf.html?pdf=${encodeURIComponent(pdfURL)}`;
+        }
+
+        document.addEventListener('DOMContentLoaded', cargarHistorias);
+    </script>
+</head>
+<body>
+    <h1 class="titulo">Catálogo de Historias</h1>
+    <ul class="menu">
+        <li><a href="#" onclick="mostrarTodo(); return false;">Todos</a></li>
+        <li><a href="#" onclick="mostrarCategoria('cuento'); return false;">Cuentos</a></li>
+        <li><a href="#" onclick="mostrarCategoria('novela'); return false;">Novelas</a></li>
+        <li><a href="#" onclick="mostrarCategoria('historia-corta'); return false;">Historias Cortas</a></li>
+    </ul>
+
+    <div id="catalogo"></div>
+
+    <div id="pdf-container"></div>
+
+</body>
+</html>

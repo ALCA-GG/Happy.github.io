@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questions</title>
+</head>
+<body>
+    <style>
+        * {
+            transition: all 0.3s;
+        }
+        body {
+            background-image: url("/image/fondos-de-pantalla-canalapps-1024x506.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            font-family: Calibri;
+            font-size: 120%;
+        }
+        .contenedor {
+            width: 98vw;
+            height: 97vh;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .encabezado {
+            background: white;
+            min-width: 300px;
+            width: 70%;
+            max-width: 600px;
+            padding: 10px;
+        }
+        .pregunta {
+            padding: 10px;
+        }
+        #imagen-adicional {
+            position: absolute;
+            top: 0;
+            width: 60%;
+            height: 30%;
+            background-image: url("/image/Background/Corazon.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.5;
+            animation: latido 1s infinite alternate;
+        }
+
+        @keyframes latido {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .btn {
+            background: white;
+            width: 60%;
+            max-width: 450px;
+            padding: 10px;
+            margin: 5px;
+        }
+        .btn:hover {
+            background: rgb(74, 180, 241);
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+    </style>
+<div id="imagen-adicional"></div>
+    <div class="contenedor">
+        <div class="encabezado">
+            <div class="pregunta" id="acertijo/adivinanza">
+                acertijo/adivinanza
+            </div>
+        </div>
+        <input type="text" id="respuesta" placeholder="Escribe tu respuesta" style="width: 300px; height: 36px;">
+        <button class="btn" id="btnConfirmar" onclick="verificarRespuesta()">Confirmar</button>
+        <button class="btn" id="btnDescargar" onclick="descargarRespuestas()">Descargar respuestas</button>
+    </div>
+    <script>
+        let questionBase = readText("Amor.json");
+        let interprete_bp = JSON.parse(questionBase);
+        let question;
+        let Answer;
+        let btnTrack = document.getElementById("btnTrack");
+        let btnConfirmar = document.getElementById("btnConfirmar");
+        let respuestas = [];
+
+        escogerPreguntaAleatoria();
+
+        function escogerPreguntaAleatoria() {
+            escogerPregunta(Math.floor(Math.random() * interprete_bp.length));
+        }
+
+        function escogerPregunta(n) {
+            question = interprete_bp[n];
+            document.getElementById("acertijo/adivinanza").innerHTML = question.pregunta;
+        }
+
+        function verificarRespuesta() {
+            let respuesta = document.getElementById("respuesta").value.trim();
+            if (respuesta !== "") {
+                respuestas.push({ pregunta: question.pregunta, respuesta: respuesta });
+                alert("¡Respuesta guardada!");
+                document.getElementById("respuesta").value = "";
+                escogerPreguntaAleatoria();
+            } else {
+                alert("Por favor, ingresa una respuesta antes de confirmar.");
+            }
+        }
+
+        function descargarRespuestas() {
+            let contenidoArchivo = "";
+
+            for (let i = 0; i < respuestas.length; i++) {
+                contenidoArchivo += `Pregunta: ${respuestas[i].pregunta}\nRespuesta: ${respuestas[i].respuesta}\n\n`;
+            }
+
+            let archivo = new Blob([contenidoArchivo], { type: 'text/plain' });
+
+            let enlaceDescarga = document.createElement('a');
+            enlaceDescarga.href = URL.createObjectURL(archivo);
+            enlaceDescarga.download = 'respuestas.txt';
+            enlaceDescarga.click();
+        }
+
+        function readText(ruta_local) {
+            var text = null;
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET", ruta_local, false);
+            xmlhttp.send();
+            if (xmlhttp.status == 200) {
+                text = xmlhttp.responseText;
+            }
+            return text;
+        }
+    </script>
+
+</body>
+</html>

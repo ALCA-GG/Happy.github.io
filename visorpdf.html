@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleVDP.css">
+    <title>Lectura</title>
+</head>
+<body>
+    <h1 class="title"></h1>
+    <object class="pdfview" type="application/pdf" id="pdfObject"></object>
+
+    <script>
+        var pdfURL = decodeURIComponent(getParameterByName('pdf'));
+        var pdfObject = document.getElementById('pdfObject');
+        pdfObject.data = pdfURL;
+
+        function getParameterByName(name, url = window.location.href) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+    </script>
+</body>
+</html>

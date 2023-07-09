@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lectura de Historia</title>
+    <style>
+    body {
+        background-color: #f4f1e9; /* Color de fondo similar a un libro */
+        margin: 0;
+        padding: 0;
+    }
+    
+    #contenedor-historia {
+        position: relative;
+        margin: 30px auto; /* Margen similar a un libro */
+        padding: 20px;
+        background-image: url('/image/Background/Histories/pngwing.com.png'); /* Imagen de fondo con la forma de una hoja */
+        background-size: 1500px 1600px; /* Ajusta el valor '2700px' según sea necesario para aumentar la altura */
+        background-repeat: no-repeat;
+        background-position: center center;
+        font-family: Georgia, serif; /* Fuente similar a un libro */
+        line-height: 1.5;
+        font-size: 18px;
+        height: 1500px; /* Ajusta el valor '800px' según sea necesario para aumentar la altura */
+    }
+
+    #contenido {
+        margin: 0 auto; /* Margen automático en los laterales para centrar el contenido */
+        max-width: 800px; /* Máximo ancho del contenido para limitar su extensión */
+        font-family: Arial, sans-serif; /* Cambiar la fuente a Arial o cualquier otra fuente sans-serif */
+        font-size: 30px; /* Cambiar el tamaño de fuente a 24px */
+        color: black; /* Cambiar el color del texto a rojo */
+    }
+
+    #boton-siguiente {
+        display: none;
+        margin-top: 20px; /* Agrega un margen superior para separar el botón del contenido */
+    }
+    </style>
+</head>
+<body>
+    <h1>Lectura de Historia</h1>
+
+    <div id="contenedor-historia">
+        <div id="contenido"></div>
+        <button id="boton-siguiente">Siguiente</button> <!-- Movido dentro del contenedor "contenedor-historia" -->
+    </div>
+
+    <script>
+    var contenidoDiv = document.getElementById('contenido');
+    var botonSiguiente = document.getElementById('boton-siguiente');
+
+    // Obtener el título de la historia de los parámetros de la URL
+    var urlParams = new URLSearchParams(window.location.search);
+    var titulo = urlParams.get('titulo');
+
+    // Obtener la historia correspondiente del JSON
+    fetch("historias.json")
+        .then(response => response.json())
+        .then(data => {
+            var historia = data.find(h => h.titulo === titulo);
+            if (historia) {
+                mostrarHistoria(historia);
+            } else {
+                console.error('No se encontró la historia:', titulo);
+            }
+        })
+        .catch(error => console.error('Error al cargar las historias:', error));
+
+    function mostrarHistoria(historia) {
+        var contenido = historia.contenido;
+        var parrafos = contenido.split('\n'); // Dividir el contenido en párrafos
+
+        var paginaActual = 0;
+        var parrafosPorPagina = 3; // Número de párrafos por página
+
+        function mostrarPagina() {
+            var inicio = paginaActual * parrafosPorPagina;
+            var fin = inicio + parrafosPorPagina;
+
+            contenidoDiv.innerHTML = ''; // Limpiar el contenido actual
+
+            for (var i = inicio; i < fin; i++) {
+                if (parrafos[i]) {
+                    var p = document.createElement('p');
+                    p.textContent = parrafos[i];
+                    contenidoDiv.appendChild(p);
+                }
+            }
+
+            // Actualizar la visibilidad del botón Siguiente
+            botonSiguiente.style.display = fin < parrafos.length ? 'block' : 'none';
+        }
+
+        mostrarPagina();
+
+        botonSiguiente.addEventListener('click', function() {
+            paginaActual++;
+            mostrarPagina();
+        });
+    }
+    </script>
+</body>
+</html>
