@@ -30,8 +30,8 @@ body {
 .login_circuit_mask{
     display: grid;
     place-items: center;
-    -webkit-mask: url(/image/bg-circuito.svg);
-    mask: url(/image/bg-circuito.svg);
+    -webkit-mask: url(https://i.ibb.co/SQkrM5X/Pngtree-circuit-board-1377943.png);
+    mask: url(https://i.ibb.co/SQkrM5X/Pngtree-circuit-board-1377943.png);
 }
 @keyframes Animationsss {
     0% {
@@ -56,7 +56,7 @@ body {
 }
 
 .container::before{
-    background: url(/image/bg-circuito.svg);
+    background: url(https://i.ibb.co/SQkrM5X/Pngtree-circuit-board-1377943.png);
 }
 .login_heading {
     text-align: center;

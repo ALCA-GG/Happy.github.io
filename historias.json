@@ -3,14 +3,14 @@
         "titulo": "Harry Potter y la piedra filosofal",
         "descripcion": "",
         "categoria": "novela",
-        "imagen": "/image/PiedraFilosofal.jpg",
+        "imagen": "https://i.ibb.co/fCY7vKL/Piedra-Filosofal.jpg",
         "pdf": "/image/pdf/harry potter y la piedra filosofal.pdf"
     },
     {
         "titulo": "Harry Potter y la cámara secreta",
         "descripcion": "",
         "categoria": "novela",
-        "imagen": "/image/Harry Potter y la cámara secreta.jpg",
+        "imagen": "https://i.ibb.co/cXtWCzS/Harry-Potter-y-la-c-mara-secreta.jpg",
         "pdf": "/image/pdf/J.K._Rowling_-_2Harry_Potter_y_la_Camara_secreta.pdf"
     },
     {

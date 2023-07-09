@@ -7,7 +7,7 @@
         body {
             width: 960px;
             margin: 0 auto;
-            background: url(/image/desktop-wallpaper-rainbow-dash-cute-rainbow-dash.jpg);
+            background: url(https://i.ibb.co/QfP9Btf/desktop-wallpaper-rainbow-dash-cute-rainbow-dash.jpg);
             background-size: cover;
         }
             h1{
@@ -27,7 +27,7 @@
                 padding: 3px;
                 border: solid 2px black;
             }
-            #boton:hover{ /* Estilo que se activa al pasar el puntero sobre el boton */
+            #boton:hover{
                 background-color: lightcoral;
                 font-size: 22px;
                 border: groove 4px red;
@@ -227,21 +227,28 @@
             }
             
             /* dibujar cadalzo y partes del pj segun sea el caso */
-            function horca(errores){
-                var imagen = new Image();
-                imagen.src = "imagenes/ahorcado"+errores+".png";
-                imagen.onload = function(){
-                    ctx.drawImage(imagen, 390, 0, 230, 230);
+            function horca(errores) {
+                // Cargar el archivo JSON con los enlaces de las imágenes
+                fetch('ahorcado.json')
+                    .then(response => response.json())
+                    .then(data => {
+                    // Acceder al arreglo de enlaces de imágenes
+                    const imagenes = data.ahorcado;
+
+                    // Verificar que el índice de errores esté dentro del rango del arreglo
+                    if (errores >= 0 && errores < imagenes.length) {
+                        const imagenUrl = imagenes[errores];
+                        const imagen = new Image();
+                        imagen.src = imagenUrl;
+                        imagen.onload = function() {
+                        ctx.drawImage(imagen, 390, 0, 230, 230);
+                        };
+                    } else {
+                        console.error('Índice de errores fuera de rango');
+                    }
+                    })
+                    .catch(error => console.error(error));
                 }
-                /*************************************************
-                // Imagen 2 mas pequeña a un lado de la horca //       
-                var imagen = new Image();
-                imagen.src = "imagenes/ahorcado"+errores+".png";
-                imagen.onload = function(){
-                    ctx.drawImage(imagen, 620, 0, 100, 100);
-                }
-                *************************************************/
-            }
             
             /* ajustar coordenadas */
             function ajusta(xx, yy){
