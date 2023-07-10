@@ -11,41 +11,41 @@
         "descripcion": "",
         "categoria": "novela",
         "imagen": "https://i.ibb.co/cXtWCzS/Harry-Potter-y-la-c-mara-secreta.jpg",
-        "pdf": "/image/pdf/J.K._Rowling_-_2Harry_Potter_y_la_Camara_secreta.pdf"
+        "pdf": "GitHub/Happy.github.io/image/pdf"
     },
     {
         "titulo": "Harry Potter y el prisionero de Azkaban",
         "descripcion": "",
         "categoria": "novela",
-        "imagen": "/image/Harry Potter y el prisionero de Azkaban.jpg",
+        "imagen": "https://i.ibb.co/YjqhKCM/Harry-Potter-y-el-prisionero-de-Azkaban.jpg",
         "pdf": "/image/pdf/RowlingJ-Harry-Potter-y-el-prisionero-de-Azkaban-III.pdf"
     },
     {
         "titulo": "Harry Potter y el cáliz de fuego",
         "descripcion": "",
         "categoria": "novela",
-        "imagen": "/image/Harry Potter y el cáliz de fuego.jpg",
+        "imagen": "https://i.ibb.co/N9gyKSp/Harry-Potter-y-el-c-liz-de-fuego.jpg",
         "pdf": "/image/pdf/HARRY POTTER Y EL CALIZ DE FUEGO.pdf"
     },
     {
         "titulo": "Harry Potter y la Orden del Fénix",
         "descripcion": "",
         "categoria": "novela",
-        "imagen": "/image/Harry Potter y la Orden del Fénix.jpg",
+        "imagen": "https://i.ibb.co/Syfn7vJ/Harry-Potter-y-la-Orden-del-F-nix.jpg",
         "pdf": "/image/pdf/Rowling, Joanne K.- 5. Harry Potter y la Orden del Fenix.doc.pdf"
     },
     {
         "titulo": "Harry Potter y el misterio del príncipe",
         "descripcion": "",
         "categoria": "novela",
-        "imagen": "/image/Harry Potter y el misterio del príncipe.jpg",
+        "imagen": "https://i.ibb.co/ZfYXkJ4/Harry-Potter-y-el-misterio-del-pr-ncipe.jpg",
         "pdf": "/image/pdf/HARRY POTTER Y EL MISTERIO DEL PRINCIPE - J. K. ROWLING.pdf"
     },
     {
         "titulo": "Harry Potter y las Reliquias de la Muerte",
         "descripcion": "",
         "categoria": "novela",
-        "imagen": "/image/Harry Potter y las Reliquias de la Muerte.jpg",
+        "imagen": "https://i.ibb.co/RCMR1y1/Harry-Potter-y-las-Reliquias-de-la-Muerte.jpg",
         "pdf": "/image/pdf/harry potter y las reliquias de la muerte.pdf"
     }
 ]
